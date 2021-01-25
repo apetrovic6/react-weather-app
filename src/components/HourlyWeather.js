@@ -4,20 +4,20 @@ const HourlyWeather = (props) => {
   const weatherHour = props.dataHour.map((e) => {
     const time = new Date(e.timestamp_local);
     return (
-      <span className="flex justify-center  " key={e.timestamp_local}>
-        <div className=" ">
-          <div className="sm:flex-auto lg:flex-none ">
-            <div className="flex justify-center mt-1 ">
+      <span className=" flex justify-center  " key={e.timestamp_local}>
+        <div className=" flex justify-center">
+          <div className="grid grid-cols-3 lg:grid-none lg:grid-cols-none  ">
+            <div className="flex justify-center mx-1 my-1 ">
               {time.getHours() > 9 ? time.getHours() : `0${time.getHours()}`}
             </div>
-            <div className=" w-7 h-7  mx-4 ">
+            <div className=" w-5 h-5  mx-1 my-1">
               <img
                 src={`https://www.weatherbit.io/static/img/icons/${e.weather.icon}.png`}
                 alt={e.weather.description}
               />
             </div>
 
-            <div className="flex justify-center">
+            <div className="flex justify-center mx-1 my-1">
               {Math.round(e.app_temp) > 0
                 ? ` ${Math.round(e.app_temp)}`
                 : Math.round(e.app_temp)}
