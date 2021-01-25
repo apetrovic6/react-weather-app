@@ -7,7 +7,7 @@ const HourlyWeather = (props) => {
       <span className=" flex justify-center  " key={e.timestamp_local}>
         <div className=" flex justify-center">
           <div className="grid grid-cols-3 lg:grid-none lg:grid-cols-none  ">
-            <div className="flex justify-center mx-1 my-1 ">
+            <div className="flex justify-center mx-1 my-1">
               {time.getHours() > 9 ? time.getHours() : `0${time.getHours()}`}
             </div>
             <div className=" w-5 h-5  mx-1 my-1">

@@ -29,10 +29,10 @@ const App = (props) => {
   };
 
   return (
-    <div className="mx-10 my-5 ">
+    <div className="mx-10 my-5">
       <div>
         <div className="flex w-auto justify-center ">
-          <h1 className="text-4xl  mx-2 my-2 pb-3">Weather</h1>
+          <h1 className="text-4xl  mx-2 my-2 pb-3 ">Weather</h1>
         </div>
       </div>
       <div className="flex w-auto justify-center">
