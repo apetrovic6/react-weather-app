@@ -17,14 +17,17 @@ const App = (props) => {
     const resultDay = await axios.get(
       `https://api.weatherbit.io/v2.0/forecast/daily?city=${term}&days=${6}&key=${API_KEY}`
     );
-    const resultHour = await axios.get(
-      `https://api.weatherbit.io/v2.0/forecast/hourly?city=${term}&key=${API_KEY}&hours=${14}`
-    );
+
+    // Hourly forecast not available on the free plan anymore
+    // const resultHour = await axios.get(
+    //   `https://api.weatherbit.io/v2.0/forecast/hourly?city=${term}&key=${API_KEY}&hours=${48}`
+    // );
     const resultCurrent = await axios.get(
       `https://api.weatherbit.io/v2.0/current?&city=${term}&key=${API_KEY}`
     );
+
     setForecast(resultDay.data.data);
-    setHourlyForecast(resultHour.data.data);
+    // setHourlyForecast(resultHour.data.data);
     setCurrentForecast(resultCurrent.data.data);
   };
 
