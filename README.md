@@ -1,4 +1,4 @@
-# Test it out live on https://weather.antepetrovic.tech
+# Test it out live: https://weather.antepetrovic.tech
 
 # Weather app
 
